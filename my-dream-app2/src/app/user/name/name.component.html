@@ -1,0 +1,12 @@
+<div class="form-group">
+  <label for="name">Name</label>
+  <input
+    [(ngModel)]="name"
+    name="name"
+    id="name"
+    type="text"
+    class="form-control"
+    placeholder="Name">
+</div>
+<p>{{ name }}</p>
+<button (click)="onNameUpdated($event)" type="button">send</button>

@@ -1,0 +1,10 @@
+<form (ngSubmit)="addUser()" #f="ngForm">
+  <app-name (updatedName)="nameUpdated($event)" [name]="name"></app-name>
+  <app-email [email]="email"></app-email>
+  <app-password [password]="password"></app-password>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="confirmCheckbox">
+    <label class="form-check-label" for="confirmCheckbox">I confirm this is really me</label>
+  </div>
+  <button [disabled]="f.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>
